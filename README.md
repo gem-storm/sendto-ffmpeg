@@ -2,7 +2,7 @@
 tired of typing output path(s) for ffmpeg? try using sendto-ffmpeg!
 
 ### usage
-right click your video and select `Send to -> ffmpeg`. a window will open, you type your arguments in, and it'll automatically make the output path for you!
+right click your video(s) and select `Send to -> ffmpeg`. a window will open, you type your arguments in, and it'll automatically make the output path for you!
 
 you can also add `-container XYZ` if you would like to use a different container.
 
