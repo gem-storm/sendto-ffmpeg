@@ -1,14 +1,14 @@
 from os.path import splitext
 from subprocess import run
+from sys import argv
 
-import argparse
-
-
-parser = argparse.ArgumentParser()
-parser.add_argument("video")
-args = parser.parse_args()
-
-input_video = args.video.replace('"', "")
+if len(argv) == 1:
+    vids = input(
+        "no input videos were passed. paste the path(s) here separated by a comma and space (,):\n>>>"
+    ).split(", ")
+    input_videos = [vid.replace('"', "") for vid in vids]
+else:
+    input_videos = argv[1:]
 
 
 def container(ffmpeg_args):
@@ -26,6 +26,7 @@ def remove_container(ffmpeg_args):
 
 enc_args = input("args:\n>>>")
 
-run(
-    f'ffmpeg -i "{input_video}" {remove_container(enc_args)} "{splitext(input_video)[0]} ~ Encoded.{container(enc_args)}"'
-)
+for v in input_videos:
+    run(
+        f'ffmpeg -i "{v}" {remove_container(enc_args)} "{splitext(v)[0]} ~ Encoded.{container(enc_args)}"'
+    )
