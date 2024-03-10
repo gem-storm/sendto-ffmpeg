@@ -9,6 +9,7 @@ right click your video(s) and select `Send to -> ffmpeg`. a window will open, yo
 ### dependencies
 - python (preferably in path)
 - ffmpeg (must be in path)
+
 you can install both of these easily using [scoop](https://scoop.sh):
 ```powershell
 scoop.cmd install python
