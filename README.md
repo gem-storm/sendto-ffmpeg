@@ -21,7 +21,7 @@ scoop.cmd install ffmpeg
 1. download `main.py`
 2. make a new shortcut and make the target follow this:
 ```
-[path/to/python.exe] [path/to/main.py]
+path/to/python.exe path/to/main.py
 ```
 3. name the shortcut to whatever you'd like, i call it `ffmpeg`
 4. move the shortcut to the sendto folder (`%appdata%/microsoft/windows/sendto`)
